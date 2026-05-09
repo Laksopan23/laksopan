@@ -41,6 +41,7 @@ export const experiences: Experience[] = [
     type: 'Internship',
     color: 'violet',
     logo: remotechiesLogo,
+    url: 'https://www.remotechies.com/',
     description:
       'Contributed to the development and deployment of full-stack applications in a remote, agile team environment.',
     highlights: [
@@ -59,6 +60,7 @@ export const experiences: Experience[] = [
     type: 'Internship',
     color: 'blue',
     logo: dgatewayinLogo,
+    url: 'https://dgatewayin.com/',
     description:
       'Focused on MERN stack development, production deployments, and application optimization.',
     highlights: [

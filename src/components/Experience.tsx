@@ -108,9 +108,16 @@ export default function Experience() {
                           </div>
                         </div>
                       </div>
-                      <button className="p-2 text-slate-300 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
+                      {exp.url && (
+                        <a 
+                          href={exp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 text-slate-300 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
                     </div>
 
                     <p className="mt-4 text-slate-600 text-sm leading-relaxed">{exp.description}</p>

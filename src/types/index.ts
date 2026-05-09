@@ -27,4 +27,5 @@ export interface Experience {
   description: string;
   highlights: string[];
   tags: string[];
+  url?: string;
 }
