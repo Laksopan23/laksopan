@@ -22,10 +22,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center text */}
-          <p className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-            Built with <Heart className="w-3 h-3 text-rose-400 fill-rose-400" /> using React + Tailwind
-          </p>
+
 
           {/* Right: Copyright */}
           <p className="text-xs text-slate-400 font-medium">

@@ -22,6 +22,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(EMAIL);
@@ -29,11 +30,29 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormState({ name: '', email: '', message: '' });
+    setIsSending(true);
+    
+    try {
+      // Note: Ensure you have a valid Formspree endpoint or replace this URL
+      const response = await fetch('https://formspree.io/f/mvoezeeo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        alert('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      alert('Error sending message. Please check your connection.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -229,10 +248,11 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-700 transition-all duration-200 shadow-sm hover:shadow-md group"
+                    disabled={isSending}
+                    className={`w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-slate-900 text-white text-sm font-bold rounded-xl transition-all duration-200 shadow-sm hover:shadow-md group ${isSending ? 'opacity-70 cursor-not-allowed' : 'hover:bg-slate-700'}`}
                   >
-                    <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                    Send Message
+                    <Send className={`w-4 h-4 ${isSending ? '' : 'group-hover:translate-x-0.5 transition-transform'}`} />
+                    {isSending ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}

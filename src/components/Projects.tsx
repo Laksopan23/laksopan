@@ -100,15 +100,17 @@ function ProjectCard({ project, index, inView }: { project: typeof projects[0]; 
           <GitHubIcon />
           GitHub
         </a>
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r ${project.accent} text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-sm`}
-        >
-          Live Demo
-          <ArrowUpRight className="w-4 h-4" />
-        </a>
+        {project.demo && project.demo !== '#' && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r ${project.accent} text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-sm`}
+          >
+            Live Demo
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+        )}
       </div>
     </motion.div>
   );
