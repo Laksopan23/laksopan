@@ -202,9 +202,14 @@ export default function Hero() {
               Laksopan<br />
               Ravindran<span className="text-slate-300">.</span>
             </h1>
-            <p className="text-2xl sm:text-3xl font-medium text-slate-500 tracking-tight mt-6">
-              Information Technology Undergraduate<span className="text-slate-900">.</span>
-            </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl sm:text-2xl text-slate-400 font-medium tracking-tight mb-8"
+          >
+            Full-Stack & AI Engineer<span className="text-slate-300">.</span>
+          </motion.p>
           </motion.div>
 
           {/* Tagline */}
