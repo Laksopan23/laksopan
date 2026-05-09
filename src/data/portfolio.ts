@@ -29,8 +29,8 @@ export const experiences: Experience[] = [
       'Specializing in bridging the gap between robust backend systems and modern Machine Learning pipelines',
     ],
     tags: [
-      'Next.js', 'React', 'Node.js', 'Spring Boot', 'Laravel', 'Python', 'Flutter', 
-      'PyTorch', 'NLP', 'OpenAI', 'MongoDB', 'Supabase', 'AWS'
+      'Next.js', 'Spring Boot', 'Laravel', 'Python', 'Flutter', 
+      'PyTorch', 'NLP (Transformers)', 'Generative AI', 'AWS'
     ],
   },
   {

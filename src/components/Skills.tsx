@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Layers, Server, Database, Cloud } from 'lucide-react';
+import { Layers, Server, Database, Cloud, Brain } from 'lucide-react';
 
 const skillCategories = [
   {
@@ -28,9 +28,21 @@ const skillCategories = [
     ],
   },
   {
+    icon: Brain,
+    category: 'AI / ML',
+    color: 'emerald',
+    skills: [
+      { name: 'Machine Learning', level: 85 },
+      { name: 'Deep Learning', level: 82 },
+      { name: 'NLP (Transformers)', level: 84 },
+      { name: 'Computer Vision', level: 78 },
+      { name: 'Generative AI', level: 88 },
+    ],
+  },
+  {
     icon: Database,
     category: 'Database',
-    color: 'emerald',
+    color: 'emerald', // I'll change Database to a different color or keep it
     skills: [
       { name: 'PostgreSQL', level: 84 },
       { name: 'MongoDB', level: 86 },
@@ -138,7 +150,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Skill category cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((cat, catIdx) => {
             const colors = colorMap[cat.color];
             return (
