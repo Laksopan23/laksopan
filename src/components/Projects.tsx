@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Star, GitBranch, ArrowUpRight, Code2 } from 'lucide-react';
 
@@ -18,6 +18,29 @@ const highlightColorMap: Record<string, string> = {
 
 function ProjectCard({ project, index, inView }: { project: typeof projects[0]; index: number; inView: boolean }) {
   const [hovered, setHovered] = useState(false);
+  const [stats, setStats] = useState({ stars: project.stars, forks: project.forks });
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const repoPath = project.github.replace('https://github.com/', '');
+        const response = await fetch(`https://api.github.com/repos/${repoPath}`);
+        if (response.ok) {
+          const data = await response.json();
+          setStats({
+            stars: data.stargazers_count,
+            forks: data.forks_count,
+          });
+        }
+      } catch (error) {
+        console.error('Failed to fetch GitHub stats:', error);
+      }
+    };
+
+    if (project.github && project.github.includes('github.com')) {
+      fetchStats();
+    }
+  }, [project.github]);
 
   return (
     <motion.div
@@ -56,11 +79,11 @@ function ProjectCard({ project, index, inView }: { project: typeof projects[0]; 
           <div className="flex items-center gap-3 text-slate-400 text-xs">
             <span className="flex items-center gap-1">
               <Star className="w-3.5 h-3.5" />
-              {project.stars}
+              {stats.stars}
             </span>
             <span className="flex items-center gap-1">
               <GitBranch className="w-3.5 h-3.5" />
-              {project.forks}
+              {stats.forks}
             </span>
           </div>
         </div>
