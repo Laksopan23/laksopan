@@ -28,7 +28,10 @@ export const experiences: Experience[] = [
       'Managing complete product lifecycles from conceptualization to production deployment and maintenance',
       'Specializing in bridging the gap between robust backend systems and modern Machine Learning pipelines',
     ],
-    tags: ['Next.js', 'React', 'Node.js', 'Laravel', 'Python', 'Flutter', 'PyTorch', 'NLP', 'OpenAI', 'AWS'],
+    tags: [
+      'Next.js', 'React', 'Node.js', 'Spring Boot', 'Laravel', 'Python', 'Flutter', 
+      'PyTorch', 'NLP', 'OpenAI', 'MongoDB', 'Supabase', 'AWS'
+    ],
   },
   {
     company: 'Remotechies',
