@@ -7,18 +7,22 @@ import { experiences } from '../data/portfolio';
 const colorBorderMap: Record<string, string> = {
   violet: 'border-violet-200 hover:border-violet-300',
   blue: 'border-blue-200 hover:border-blue-300',
+  emerald: 'border-emerald-200 hover:border-emerald-300',
 };
 const colorDotMap: Record<string, string> = {
   violet: 'bg-violet-500',
   blue: 'bg-blue-500',
+  emerald: 'bg-emerald-500',
 };
 const colorBadgeMap: Record<string, string> = {
   violet: 'bg-violet-50 text-violet-700 border-violet-200',
   blue: 'bg-blue-50 text-blue-700 border-blue-200',
+  emerald: 'bg-emerald-50 text-emerald-700 border-emerald-200',
 };
 const colorTagMap: Record<string, string> = {
   violet: 'bg-violet-100 text-violet-700',
   blue: 'bg-blue-100 text-blue-700',
+  emerald: 'bg-emerald-100 text-emerald-700',
 };
 
 export default function Experience() {
