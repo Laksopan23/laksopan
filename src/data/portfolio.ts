@@ -12,6 +12,24 @@ export const navLinks = [
 
 export const experiences: Experience[] = [
   {
+    company: 'Freelance',
+    role: 'Full-Stack & AI Engineer',
+    period: 'Jan 2026 – Present',
+    location: 'Remote',
+    type: 'Self-Employed',
+    color: 'emerald',
+    logo: '', 
+    description:
+      'Developing high-performance full-stack applications with a focus on AI integration and scalable architectures.',
+    highlights: [
+      'Architecting custom web solutions for diverse clients using MERN, Next.js, and Cloud-native technologies',
+      'Implementing on-device and cloud-based AI models (NLP, Computer Vision) to build intelligent features',
+      'Managing complete product lifecycles from conceptualization to production deployment and maintenance',
+      'Specializing in bridging the gap between robust backend systems and modern Machine Learning pipelines',
+    ],
+    tags: ['Next.js', 'React', 'Node.js', 'Python', 'MLOps', 'AWS'],
+  },
+  {
     company: 'Remotechies',
     role: 'Software Engineer Intern (Remote)',
     period: 'Jun 2025 – Dec 2025',

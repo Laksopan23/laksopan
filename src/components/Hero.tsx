@@ -215,10 +215,10 @@ export default function Hero() {
             }}
             className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-lg"
           >
-            Architecting scalable full-stack applications with the{' '}
-            <span className="text-slate-700 font-medium">MERN stack</span>,{' '}
-            <span className="text-slate-700 font-medium">Next.js</span>, and{' '}
-            <span className="text-slate-700 font-medium">Distributed Systems</span>.
+            Architecting scalable full-stack applications with a core focus on{' '}
+            <span className="text-slate-700 font-medium">Artificial Intelligence</span>,{' '}
+            <span className="text-slate-700 font-medium">Distributed Systems</span>, and{' '}
+            <span className="text-slate-700 font-medium">Cloud Architecture</span>.
           </motion.p>
 
           {/* CTA Buttons */}

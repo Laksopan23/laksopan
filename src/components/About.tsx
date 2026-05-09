@@ -110,9 +110,9 @@ export default function About() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Currently at</p>
-                  <p className="text-base font-bold">SLIIT · B.Sc. (Hons) in Information Technology</p>
-                  <p className="text-[10px] text-slate-500 font-medium mt-1">Oct 2022 — Present</p>
+                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Focusing on</p>
+                  <p className="text-base font-bold">Artificial Intelligence & AI-Powered Web Systems</p>
+                  <p className="text-[10px] text-slate-500 font-medium mt-1">Jan 2026 — Present</p>
                 </div>
                 <div className="flex gap-6">
                   <div className="text-center">
