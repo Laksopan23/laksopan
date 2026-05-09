@@ -36,7 +36,7 @@ export default function Contact() {
     
     try {
       // Note: Ensure you have a valid Formspree endpoint or replace this URL
-      const response = await fetch('https://formspree.io/f/mvoezeeo', {
+      const response = await fetch('https://formsubmit.co/ajax/laksopan2001@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formState),
