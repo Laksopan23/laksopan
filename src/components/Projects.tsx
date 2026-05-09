@@ -155,7 +155,7 @@ export default function Projects() {
           className="mb-16"
         >
           <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-            04 . Featured Projects
+            04 - Featured Projects
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">

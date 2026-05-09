@@ -67,7 +67,7 @@ export default function Contact() {
           className="mb-16"
         >
           <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-            05 . Contact
+            05 - Contact
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -89,7 +89,7 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-slate-900 mb-3">Get In Touch</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
                 I'm actively looking for full-time Software Engineer roles and freelance
-                collaborations. Whether you have an opportunity or just want to connect . my inbox
+                collaborations. Whether you have an opportunity or just want to connect - my inbox
                 is always open.
               </p>
             </div>

@@ -25,7 +25,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-              01 . Personal Journey
+              01 - Personal Journey
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-6">
               Building software with<br />
@@ -70,7 +70,7 @@ export default function About() {
             {/* Divider with quote */}
             <div className="mt-8 pl-5 border-l-2 border-slate-200">
               <p className="text-sm italic text-slate-500">
-                "Code is like humor. When you have to explain it, it's bad." . Cory House
+                "Code is like humor. When you have to explain it, it's bad." - Cory House
               </p>
             </div>
           </motion.div>
@@ -109,7 +109,7 @@ export default function About() {
                 <div>
                   <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Focusing on</p>
                   <p className="text-base font-bold">Artificial Intelligence & AI-Powered Web Systems</p>
-                  <p className="text-[10px] text-slate-500 font-medium mt-1">Jan 2026 . Present</p>
+                  <p className="text-[10px] text-slate-500 font-medium mt-1">Jan 2026 - Present</p>
                 </div>
                 <div className="flex gap-6">
                   <div className="text-center">
