@@ -1,5 +1,6 @@
 import remotechiesLogo from '../assets/companies/remotechies.png';
 import dgatewayinLogo from '../assets/companies/dgatewayin.png';
+import freelanceLogo from '../assets/companies/freelance.png';
 import { Project, Experience } from '../types';
 
 export const navLinks = [
@@ -13,21 +14,21 @@ export const navLinks = [
 export const experiences: Experience[] = [
   {
     company: 'Freelance',
-    role: 'Full-Stack & AI Engineer',
+    role: 'Senior Software Engineer | AI Architect',
     period: 'Jan 2026 – Present',
     location: 'Remote',
     type: 'Self-Employed',
     color: 'emerald',
-    logo: '', 
+    logo: freelanceLogo, 
     description:
-      'Developing high-performance full-stack applications with a focus on AI integration and scalable architectures.',
+      'Architecting intelligent, data-driven ecosystems specializing in the intersection of high-performance web systems and modern Artificial Intelligence.',
     highlights: [
-      'Architecting custom web solutions for diverse clients using MERN, Next.js, and Cloud-native technologies',
-      'Implementing on-device and cloud-based AI models (NLP, Computer Vision) to build intelligent features',
-      'Managing complete product lifecycles from conceptualization to production deployment and maintenance',
-      'Specializing in bridging the gap between robust backend systems and modern Machine Learning pipelines',
+      'Designing and deploying scalable distributed systems using MERN, Next.js 15, and Microservices architecture',
+      'Implementing sophisticated AI features using LLMs (OpenAI, LangChain) and custom Computer Vision models for automated workflows',
+      'Orchestrating cloud-native deployments on AWS and Azure with a core focus on MLOps and CI/CD automation',
+      'Providing technical leadership and architectural strategy to transform standard platforms into AI-ready ecosystems',
     ],
-    tags: ['Next.js', 'React', 'Node.js', 'Python', 'MLOps', 'AWS'],
+    tags: ['Next.js 15', 'Python', 'TensorFlow', 'LangChain', 'AWS SageMaker', 'Kubernetes', 'MLOps'],
   },
   {
     company: 'Remotechies',
