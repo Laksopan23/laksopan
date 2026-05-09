@@ -143,7 +143,7 @@ export default function Skills() {
               Skill Matrix<span className="text-slate-300">.</span>
             </h2>
             <p className="text-slate-500 text-sm max-w-sm">
-              Proficiency across the full SDLC — from pixel-perfect UIs to distributed backend systems.
+              Proficiency across the full SDLC . from pixel-perfect UIs to distributed backend systems.
             </p>
           </div>
           <div className="mt-6 h-px bg-slate-100" />
