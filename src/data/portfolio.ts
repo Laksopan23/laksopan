@@ -12,26 +12,10 @@ export const navLinks = [
 
 export const experiences: Experience[] = [
   {
-    company: 'Independent Freelance',
-    role: 'Software Engineer',
-    period: 'Jan 2024 – Present',
-    location: 'Remote',
-    type: 'Contract',
-    color: 'emerald',
-    description: 'Providing full-stack development and architectural consulting for international clients.',
-    highlights: [
-      'Delivered end-to-end web applications using MERN stack and Next.js, focusing on scalability and user experience',
-      'Architected secure backend systems with Node.js and Django, integrating third-party APIs and payment gateways',
-      'Consulted on cloud migration and infrastructure optimization using AWS and Google Cloud',
-      'Collaborated directly with stakeholders to translate business requirements into technical specifications',
-    ],
-    tags: ['Next.js', 'React', 'Node.js', 'Cloud Infrastructure', 'Client Relations'],
-  },
-  {
     company: 'Remotechies',
     role: 'Software Engineer Intern (Remote)',
     period: 'Jun 2025 – Dec 2025',
-    location: 'Sri Lanka',
+    location: 'Batticaloa, Sri Lanka',
     type: 'Internship',
     color: 'violet',
     logo: remotechiesLogo,
@@ -66,27 +50,6 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
-  {
-    title: 'Freelance Software Development',
-    subtitle: 'Bespoke Client Solutions',
-    description:
-      'Providing end-to-end full-stack development and architectural consulting services for international clients.',
-    tags: ['Consulting', 'Full-Stack', 'Architecture', 'Deployment'],
-    highlight: 'Professional Services',
-    highlightColor: 'emerald',
-    features: [
-      'Successfully delivered multiple production-ready web and mobile applications',
-      'Optimized client platforms for SEO, performance, and cross-browser compatibility',
-      'Implemented robust CI/CD pipelines for seamless project handovers',
-      'Maintained high client satisfaction through agile communication and rapid delivery',
-    ],
-    stars: 0,
-    forks: 0,
-    github: 'https://github.com/Laksopan23',
-    demo: '#',
-    accent: 'from-emerald-600 to-teal-700',
-    accentLight: 'bg-emerald-50 border-emerald-200',
-  },
   {
     title: 'ProteqHer SOS Listener',
     subtitle: 'AI-Powered Emergency Response',
