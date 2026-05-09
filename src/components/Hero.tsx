@@ -200,7 +200,7 @@ export default function Hero() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-slate-900 tracking-tight leading-[1.1]">
               Laksopan<br />
-              Ravindran<span className="text-slate-300">.</span>
+              <span className="text-slate-500">Ravindran</span><span className="text-slate-300">.</span>
             </h1>
             <p className="text-2xl sm:text-3xl font-medium text-slate-500 tracking-tight mt-6">
               Full-Stack & AI Engineer<span className="text-slate-900">.</span>
