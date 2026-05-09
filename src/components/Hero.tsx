@@ -203,7 +203,7 @@ export default function Hero() {
               Ravindran<span className="text-slate-300">.</span>
             </h1>
             <p className="text-2xl sm:text-3xl font-medium text-slate-500 tracking-tight mt-6">
-              Information Technology Undergraduate<span className="text-slate-900">.</span>
+              Freelance Software Engineer <span className="text-slate-300">|</span> IT Undergraduate<span className="text-slate-900">.</span>
             </p>
           </motion.div>
 
@@ -285,12 +285,12 @@ export default function Hero() {
 
             <div className="flex gap-2 ml-1">
               <div className="text-center px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg">
-                <p className="text-xs font-bold text-slate-900">7</p>
+                <p className="text-xs font-bold text-slate-900">8</p>
                 <p className="text-[10px] text-slate-400 font-medium">Projects</p>
               </div>
               <div className="text-center px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg">
-                <p className="text-xs font-bold text-slate-900">2</p>
-                <p className="text-[10px] text-slate-400 font-medium">Internships</p>
+                <p className="text-xs font-bold text-slate-900">3</p>
+                <p className="text-[10px] text-slate-400 font-medium">Experiences</p>
               </div>
             </div>
           </motion.div>
