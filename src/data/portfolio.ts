@@ -51,6 +51,27 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    title: 'ProteqHer SOS Listener',
+    subtitle: 'AI-Powered Emergency Response',
+    description:
+      'A high-reliability safety application that utilizes on-device ML to monitor for distress signals and trigger instant emergency assistance.',
+    tags: ['Flutter', 'Dart', 'Machine Learning', 'Android Services', 'Safety Tech'],
+    highlight: 'ML / Mobile',
+    highlightColor: 'violet',
+    features: [
+      'Monitors for screams or distress calls using on-device sound classification models',
+      'Runs as a persistent Android Foreground Service to ensure protection even when locked',
+      'Triggers instant emergency assistance and notifications during distress situations',
+      'Privacy-focused architecture with all sound processing happening locally on the device',
+    ],
+    stars: 0,
+    forks: 0,
+    github: 'https://github.com/Laksopan23/proteqher-sos-listener',
+    demo: '#',
+    accent: 'from-violet-500 to-purple-600',
+    accentLight: 'bg-violet-50 border-violet-200',
+  },
+  {
     title: 'SkillZone',
     subtitle: 'Social Learning & Skill-Sharing Platform',
     description:

@@ -285,7 +285,7 @@ export default function Hero() {
 
             <div className="flex gap-2 ml-1">
               <div className="text-center px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg">
-                <p className="text-xs font-bold text-slate-900">6</p>
+                <p className="text-xs font-bold text-slate-900">7</p>
                 <p className="text-[10px] text-slate-400 font-medium">Projects</p>
               </div>
               <div className="text-center px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg">
