@@ -25,7 +25,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-              01 — About Me
+              01 . Personal Journey
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-6">
               Building software with<br />

@@ -18,7 +18,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-[10px] text-slate-400 font-medium">
-              Information Technology Undergraduate • Sri Lanka
+              Information Technology Undergraduate | Sri Lanka
             </p>
           </div>
 

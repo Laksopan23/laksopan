@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ExternalLink, Star, GitBranch, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Star, GitBranch, ArrowUpRight, Code2 } from 'lucide-react';
 
 const GitHubIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -42,8 +42,8 @@ function ProjectCard({ project, index, inView }: { project: typeof projects[0]; 
       <div className="p-6 pb-0">
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-2xl border ${project.accentLight}`}>
-              {project.emoji}
+            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${project.accentLight}`}>
+              <Code2 className="w-6 h-6 text-slate-400" />
             </div>
             <div>
               <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${highlightColorMap[project.highlightColor]}`}>
@@ -130,7 +130,7 @@ export default function Projects() {
           className="mb-16"
         >
           <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-            04 — Featured Projects
+            04 . Featured Projects
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">

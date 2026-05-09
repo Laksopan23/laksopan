@@ -55,7 +55,6 @@ export const projects: Project[] = [
     subtitle: 'MERN Stack Platform',
     description:
       'A comprehensive booking system designed for service providers to manage appointments and schedules efficiently.',
-    emoji: '📅',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     highlight: 'Full-Stack',
     highlightColor: 'blue',
@@ -76,7 +75,6 @@ export const projects: Project[] = [
     subtitle: 'Social Learning Platform',
     description:
       'A social network for knowledge sharing, allowing users to connect, post updates, and engage with educational content.',
-    emoji: '🎯',
     tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'JWT'],
     highlight: 'Social App',
     highlightColor: 'emerald',
@@ -97,7 +95,6 @@ export const projects: Project[] = [
     subtitle: 'Booking & Gallery Platform',
     description:
       'A platform for photographers to manage event bookings and showcase galleries to clients.',
-    emoji: '📸',
     tags: ['Next.js', 'PostgreSQL', 'Supabase', 'Tailwind CSS'],
     highlight: 'Photography',
     highlightColor: 'blue',
@@ -118,7 +115,6 @@ export const projects: Project[] = [
     subtitle: 'AI-Powered Screening Tool',
     description:
       'An intelligent system that analyzes resumes and matches them to job descriptions using semantic similarity.',
-    emoji: '🤖',
     tags: ['Python', 'SBERT', 'NLP', 'Flask', 'React'],
     highlight: 'AI / ML',
     highlightColor: 'violet',
@@ -139,7 +135,6 @@ export const projects: Project[] = [
     subtitle: 'PHP/Laravel Operations',
     description:
       'A comprehensive management tool for gym owners to handle memberships, staff, and equipment tracking.',
-    emoji: '🏋️',
     tags: ['PHP', 'Laravel', 'MySQL', 'Bootstrap'],
     highlight: 'Operations',
     highlightColor: 'emerald',
@@ -160,7 +155,6 @@ export const projects: Project[] = [
     subtitle: 'Educational Analytics Platform',
     description:
       'A web-based platform for institutional analytics, tracking student performance and engagement.',
-    emoji: '📚',
     tags: ['HTML', 'CSS', 'JavaScript', 'Data Visualization'],
     highlight: 'Analytics',
     highlightColor: 'emerald',
@@ -181,7 +175,6 @@ export const projects: Project[] = [
     subtitle: 'Medical AI Classification',
     description:
       'Deep learning models for detecting brain tumors from MRI scans using CNN architectures.',
-    emoji: '🧠',
     tags: ['Python', 'PyTorch', 'CNN', 'Jupyter'],
     highlight: 'Deep Learning',
     highlightColor: 'violet',
@@ -202,7 +195,6 @@ export const projects: Project[] = [
     subtitle: 'Java Operations System',
     description:
       'A desktop application for managing bakery sales, inventory, and order processing.',
-    emoji: '🥐',
     tags: ['Java', 'MySQL', 'Inventory Management'],
     highlight: 'Desktop App',
     highlightColor: 'emerald',

@@ -103,7 +103,7 @@ function ProfileCard() {
                   <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">
                     Software Engineer
                   </p>
-                  <p className="text-sm font-bold text-slate-900">SLIIT • Sri Lanka</p>
+                  <p className="text-sm font-bold text-slate-900">SLIIT | Sri Lanka</p>
                 </div>
                 {/* Available badge */}
                 <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1.5">
@@ -123,7 +123,7 @@ function ProfileCard() {
             animate={{ rotate: [0, -2, 2, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
-            Full-Stack Dev 🚀
+            Full-Stack Dev
           </motion.div>
 
           {/* Floating tech badge top-left */}
@@ -132,7 +132,7 @@ function ProfileCard() {
             animate={{ y: [0, -4, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
           >
-            MERN · Next.js · AWS
+            MERN | Next.js | AWS
           </motion.div>
         </motion.div>
       </motion.div>
@@ -200,7 +200,7 @@ export default function Hero() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-slate-900 tracking-tight leading-[1.1]">
               Laksopan<br />
-              Ravindran<span className="text-slate-300">—</span>
+              Ravindran<span className="text-slate-300">.</span>
             </h1>
             <p className="text-2xl sm:text-3xl font-medium text-slate-500 tracking-tight mt-6">
               Information Technology Undergraduate<span className="text-slate-900">.</span>

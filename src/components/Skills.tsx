@@ -124,7 +124,7 @@ export default function Skills() {
           className="mb-16"
         >
           <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-            02 — Technical Skills
+            02 . Technical Skills
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
