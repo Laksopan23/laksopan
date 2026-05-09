@@ -35,18 +35,15 @@ export default function About() {
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
                 I am a Software Engineering undergraduate at <span className="font-semibold text-slate-800">SLIIT</span> with 
-                internship experience building and deploying full-stack applications using the 
-                <span className="font-semibold text-slate-800">MERN stack, Next.js, and Django</span>.
+                internship experience building and deploying full-stack applications using the <span className="font-semibold text-slate-800">MERN stack, Next.js, and Django</span>.
               </p>
               <p>
-                Having completed internships at <span className="font-semibold text-slate-800">Remotechies</span> and 
-                <span className="font-semibold text-slate-800">DGatewayIn</span>, I have developed a deep understanding of 
+                Having completed internships at <span className="font-semibold text-slate-800">Remotechies</span> and <span className="font-semibold text-slate-800">DGatewayIn</span>, I have developed a deep understanding of 
                 responsive UI design with Tailwind CSS, implementing RESTful APIs, and working with 
                 distributed databases like PostgreSQL and Supabase.
               </p>
               <p>
-                I am experienced in deploying and maintaining applications across 
-                <span className="font-semibold text-slate-800">AWS, Hostinger, and Coolify</span>, and I thrive in 
+                I am experienced in deploying and maintaining applications across <span className="font-semibold text-slate-800">AWS, Hostinger, and Coolify</span>, and I thrive in 
                 collaborative, agile team environments where precision and performance are key.
               </p>
             </div>
