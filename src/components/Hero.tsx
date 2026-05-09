@@ -202,8 +202,8 @@ export default function Hero() {
               Laksopan<br />
               <span className="text-slate-500">Ravindran</span><span className="text-slate-300">.</span>
             </h1>
-            <p className="text-2xl sm:text-3xl font-medium text-slate-500 tracking-tight mt-6">
-              Full-Stack & AI Engineer<span className="text-slate-900">.</span>
+            <p className="text-2xl sm:text-3xl font-medium text-slate-900 tracking-tight mt-6">
+              Full-Stack & AI Engineer<span className="text-slate-300">.</span>
             </p>
           </motion.div>
 
