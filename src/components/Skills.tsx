@@ -105,8 +105,7 @@ function SkillBar({ name, level, barColor, delay }: { name: string; level: numbe
 const extraSkills = [
   'PHP', 'Laravel', 'Bootstrap', 'Hostinger', 'Java', 'Kotlin', 'C / C++', 
   'SBERT', 'Prisma', 'JWT', 'Socket.io', 'Redis', 'GraphQL', 'Nginx', 
-  'Linux', 'Figma', 'Postman', 'Jest', 'TensorFlow', 'PyTorch', 'LangChain', 
-  'OpenCV', 'Scikit-learn', 'Kubernetes', 'CI/CD', 'Terraform', 'GCP'
+  'Linux', 'Figma', 'Postman', 'Jest',
 ];
 
 export default function Skills() {
