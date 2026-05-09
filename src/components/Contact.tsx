@@ -88,7 +88,7 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Get In Touch</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                I'm actively looking for full-time Software Engineer roles and freelance
+                I'm actively looking for full-time Full-Stack & AI Engineer roles and freelance
                 collaborations. Whether you have an opportunity or just want to connect - my inbox
                 is always open.
               </p>
