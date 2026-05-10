@@ -67,9 +67,23 @@ body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     background-color: white !important;
-    width: 1200px !important; /* Fixed width to match web layout */
-    zoom: 0.65; /* Scale down to fit A4 */
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     overflow: visible !important;
+  }
+
+  /* CENTER EVERYTHING: Fixes alignment issues */
+  .max-w-6xl, .max-w-7xl, section > div {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 1100px !important; /* Matches web container width */
+    float: none !important;
+  }
+
+  /* SCALE FOR A4: Adjust zoom to fill the page properly */
+  body {
+    zoom: 0.72; 
   }
 
   /* FORCE VISIBILITY: Fixes Framer Motion hidden content */
