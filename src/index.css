@@ -68,23 +68,35 @@ body {
     print-color-adjust: exact !important;
     background-color: white !important;
     color: black !important;
-    width: 210mm; /* A4 width */
+    width: 100% !important;
     height: auto;
   }
 
   body {
     font-size: 10.5pt;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  /* Hide non-essential interactive/decorative elements */
+  /* HIDE ALL WEB-ONLY INTERACTIVE ELEMENTS */
+  header,
   nav,
+  footer,
   button,
   .no-print,
-  .noise-bg::before,
-  .noise-bg,
+  #terminal, /* Hide terminal as it takes too much space in PDF */
   [role="navigation"],
-  footer {
+  .social-links, /* Assuming a class name or I'll target generic selectors */
+  a[href^="#"], /* Hides all anchor links like #about */
+  .stats-container, /* Optional: hide if it looks too web-like */
+  .mouse-follower,
+  .noise-bg {
+    display: none !important;
+  }
+
+  /* Target specific buttons in Hero and Contact */
+  .hero-buttons,
+  .contact-form-container button,
+  a.inline-flex.items-center /* Target lucide-react icon buttons */ {
     display: none !important;
   }
 
@@ -105,12 +117,11 @@ body {
 
   /* Section management */
   section {
-    padding: 2rem 0 !important;
+    padding: 1.5rem 0 !important;
     page-break-inside: auto;
     border: none !important;
     background: transparent !important;
     display: block !important;
-    float: none !important;
   }
 
   h1, h2, h3 {
@@ -125,19 +136,19 @@ body {
   [class*="rounded-2xl"],
   [class*="border"] {
     page-break-inside: avoid !important;
-    border: 1px solid #cbd5e1 !important;
+    border: 1px solid #e2e8f0 !important;
     box-shadow: none !important;
     margin-bottom: 1.5rem !important;
     background-color: #fff !important;
     display: block !important;
   }
 
-  /* Force headers to start on new pages if they feel cramped */
+  /* Force headers to start on new pages for a clean look */
   #experience, #projects {
     page-break-before: always;
   }
 
-  /* Link handling - optionally show URLs in parentheses */
+  /* Link handling */
   a {
     text-decoration: none !important;
     color: #0f172a !important;
