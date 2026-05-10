@@ -81,8 +81,12 @@ body {
     display: none !important;
   }
 
-  /* HARD RESET LAYOUT: Force single-column linear flow */
-  * {
+  /* HARD RESET LAYOUT: Force single-column linear flow for visible elements only */
+  script, style, head, meta, link, noscript {
+    display: none !important;
+  }
+
+  div, section, header, h1, h2, h3, p, span, li, img, a {
     position: static !important;
     display: block !important;
     width: 100% !important;
