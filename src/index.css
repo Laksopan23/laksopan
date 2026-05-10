@@ -59,13 +59,22 @@ body {
 @media print {
   @page {
     size: A4;
-    margin: 1cm;
+    margin: 1.5cm;
+  }
+
+  /* Force color and background rendering in browsers */
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: white !important;
+    color: black !important;
+    width: 210mm; /* A4 width */
+    height: auto;
   }
 
   body {
-    background-color: white !important;
-    color: black !important;
-    font-size: 10pt;
+    font-size: 10.5pt;
+    line-height: 1.5;
   }
 
   /* Hide non-essential interactive/decorative elements */
@@ -73,8 +82,17 @@ body {
   button,
   .no-print,
   .noise-bg::before,
+  .noise-bg,
+  [role="navigation"],
   footer {
     display: none !important;
+  }
+
+  /* Reset layout for print */
+  .max-w-6xl {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   /* Remove all animations and transitions */
@@ -87,35 +105,41 @@ body {
 
   /* Section management */
   section {
-    padding: 1.5rem 0 !important;
+    padding: 2rem 0 !important;
     page-break-inside: auto;
     border: none !important;
     background: transparent !important;
+    display: block !important;
+    float: none !important;
   }
 
   h1, h2, h3 {
     page-break-after: avoid;
     color: #000 !important;
+    margin-bottom: 0.5rem !important;
   }
 
   /* Ensure cards don't break awkwardly in the middle */
   .experience-card,
   .project-card,
-  [class*="rounded-2xl"] {
+  [class*="rounded-2xl"],
+  [class*="border"] {
     page-break-inside: avoid !important;
-    border: 1px solid #e2e8f0 !important;
+    border: 1px solid #cbd5e1 !important;
     box-shadow: none !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    background-color: #fff !important;
+    display: block !important;
   }
 
   /* Force headers to start on new pages if they feel cramped */
-  #experience, #projects, #contact {
+  #experience, #projects {
     page-break-before: always;
   }
 
-  /* Link handling */
+  /* Link handling - optionally show URLs in parentheses */
   a {
     text-decoration: none !important;
-    color: #000 !important;
+    color: #0f172a !important;
   }
 }
