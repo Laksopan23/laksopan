@@ -55,3 +55,67 @@ body {
   pointer-events: none;
   z-index: 0;
 }
+/* Print Styles for high-quality PDF export */
+@media print {
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 10pt;
+  }
+
+  /* Hide non-essential interactive/decorative elements */
+  nav,
+  button,
+  .no-print,
+  .noise-bg::before,
+  footer {
+    display: none !important;
+  }
+
+  /* Remove all animations and transitions */
+  * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Section management */
+  section {
+    padding: 1.5rem 0 !important;
+    page-break-inside: auto;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  /* Ensure cards don't break awkwardly in the middle */
+  .experience-card,
+  .project-card,
+  [class*="rounded-2xl"] {
+    page-break-inside: avoid !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Force headers to start on new pages if they feel cramped */
+  #experience, #projects, #contact {
+    page-break-before: always;
+  }
+
+  /* Link handling */
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+}
