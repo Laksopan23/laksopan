@@ -55,97 +55,98 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-/* Print Styles for high-quality PDF export */
+/* Print Styles - HARD RESET for perfect PDF export */
 @media print {
   @page {
     size: A4;
     margin: 1.5cm;
   }
 
-  /* Force color and background rendering in browsers */
+  /* Force standard document colors */
   html, body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    background-color: white !important;
+    background: white !important;
     color: black !important;
     width: 100% !important;
     height: auto !important;
     overflow: visible !important;
   }
 
-  body {
-    font-size: 10.5pt;
-    line-height: 1.4;
-  }
-
-  /* HIDE ALL WEB-ONLY INTERACTIVE ELEMENTS */
+  /* HIDE ALL INTERACTIVE/WEB UI */
   header, nav, footer, button, .no-print, #terminal, [role="navigation"],
   .social-links, a[href^="#"], .stats-container, .mouse-follower, .noise-bg,
-  .timeline-line, .scroll-indicator, .hero-buttons, .contact-form-container button,
-  a.inline-flex.items-center, svg:not(.lucide) {
+  .timeline-line, .scroll-indicator, .hero-buttons, .contact-form-container,
+  .contact-info, .mouse-follower, canvas, .cursor-follower {
     display: none !important;
   }
 
-  /* BULLETPROOF CONTAINER ALIGNMENT */
-  .max-w-6xl, .max-w-5xl, .max-w-7xl, [class*="max-w-"] {
+  /* HARD RESET LAYOUT: Force single-column linear flow */
+  * {
+    position: static !important;
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     float: none !important;
+    text-align: left !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    box-shadow: none !important;
   }
 
-  /* FORCE SINGLE COLUMN FOR EVERYTHING (Better for A4) */
-  .grid, .flex {
-    display: block !important;
-    width: 100% !important;
-  }
-
-  /* Specific Hero alignment */
-  #home .max-w-6xl {
+  /* Header & Title Alignment */
+  h1, h2, h3, #home {
     text-align: center !important;
-  }
-
-  /* Center headings */
-  h1, h2, h3 {
-    text-align: center !important;
-    page-break-after: avoid;
-    color: #000 !important;
-    margin-top: 1.5rem !important;
     margin-bottom: 1rem !important;
   }
 
-  /* Fix for the 'Ravindran' name break */
-  h1 span {
-    display: inline !important;
-  }
+  h1 { font-size: 24pt !important; margin-top: 1cm !important; }
+  h2 { font-size: 18pt !important; margin-top: 1.5cm !important; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem !important; }
+  h3 { font-size: 14pt !important; margin-top: 1rem !important; }
 
-  /* Section management */
+  /* Section Management */
   section {
-    padding: 1.5rem 0 !important;
-    page-break-inside: auto;
-    border: none !important;
-    background: transparent !important;
-    width: 100% !important;
-    margin: 0 auto !important;
+    display: block !important;
+    margin-bottom: 2rem !important;
+    padding: 0 !important;
   }
 
-  /* Ensure cards don't break awkwardly */
-  .experience-card,
-  .project-card,
-  [class*="rounded-2xl"],
-  [class*="border"] {
-    page-break-inside: avoid !important;
-    border: 1px solid #e2e8f0 !important;
-    box-shadow: none !important;
-    margin-bottom: 1.5rem !important;
-    background-color: #fff !important;
-    padding: 1.5rem !important;
-    width: 100% !important;
+  /* Card Styling (Experience & Projects) */
+  .experience-card, .project-card, [class*="rounded-2xl"], [class*="border"] {
     display: block !important;
+    margin-top: 1rem !important;
+    padding: 1rem !important;
+    border: 1px solid #e2e8f0 !important;
+    page-break-inside: avoid !important;
+    border-radius: 8px !important;
+  }
+
+  /* Text Legibility */
+  p, span, li {
+    font-size: 10.5pt !important;
+    color: #1e293b !important;
+    line-height: 1.5 !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* Ensure tags/badges stay visible and inline */
+  .flex.gap-2, .flex-wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    width: auto !important;
+  }
+  
+  span[class*="bg-"], .badge {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 2px 8px !important;
+    font-size: 9pt !important;
+    border-radius: 4px !important;
   }
 
   /* Force headers to start on new pages */
@@ -153,20 +154,10 @@ body {
     page-break-before: always;
   }
 
-  /* Adjust typography for print */
-  .text-slate-500, .text-slate-400 {
-    color: #334155 !important;
-  }
-
-  /* Link handling */
-  a {
-    text-decoration: none !important;
-    color: #0f172a !important;
-  }
-
-  /* Image handling - hide the large profile image in print if it causes issues, or center it */
-  .hero-image-container, [class*="aspect-square"] {
-    max-width: 250px !important;
+  /* Image management */
+  .hero-image-container, img {
+    max-width: 200px !important;
     margin: 1rem auto !important;
+    border-radius: 50% !important;
   }
 }
