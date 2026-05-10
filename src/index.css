@@ -55,113 +55,61 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-/* Print Styles - HARD RESET for perfect PDF export */
+/* High-Fidelity Print Engine - Keeps the exact website look */
 @media print {
   @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 0; /* Full bleed for exact view */
   }
 
-  /* Force standard document colors */
+  /* Force website colors and backgrounds */
   html, body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    background: white !important;
-    color: black !important;
-    width: 100% !important;
-    height: auto !important;
+    background-color: white !important;
+    width: 1200px !important; /* Fixed width to match web layout */
+    zoom: 0.65; /* Scale down to fit A4 */
     overflow: visible !important;
   }
 
-  /* HIDE ALL INTERACTIVE/WEB UI */
-  header, nav, footer, button, .no-print, #terminal, [role="navigation"],
-  .social-links, a[href^="#"], .stats-container, .mouse-follower, .noise-bg,
-  .timeline-line, .scroll-indicator, .hero-buttons, .contact-form-container,
-  .contact-info, .mouse-follower, canvas, .cursor-follower {
-    display: none !important;
-  }
-
-  /* HARD RESET LAYOUT: Force single-column linear flow for visible elements only */
-  script, style, head, meta, link, noscript {
-    display: none !important;
-  }
-
-  div, section, header, h1, h2, h3, p, span, li, img, a {
-    position: static !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    float: none !important;
-    text-align: left !important;
+  /* FORCE VISIBILITY: Fixes Framer Motion hidden content */
+  * {
+    opacity: 1 !important;
+    visibility: visible !important;
     transition: none !important;
     animation: none !important;
     transform: none !important;
-    box-shadow: none !important;
+    scroll-behavior: auto !important;
   }
 
-  /* Header & Title Alignment */
-  h1, h2, h3, #home {
-    text-align: center !important;
-    margin-bottom: 1rem !important;
+  /* Hide only the 'web-only' UI */
+  header, nav, footer, .no-print, button, 
+  .scroll-indicator, .mouse-follower, .cursor-follower {
+    display: none !important;
   }
 
-  h1 { font-size: 24pt !important; margin-top: 1cm !important; }
-  h2 { font-size: 18pt !important; margin-top: 1.5cm !important; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem !important; }
-  h3 { font-size: 14pt !important; margin-top: 1rem !important; }
-
-  /* Section Management */
+  /* Keep the exact layout structure */
   section {
-    display: block !important;
-    margin-bottom: 2rem !important;
-    padding: 0 !important;
+    page-break-inside: avoid;
+    padding: 4rem 2rem !important;
   }
 
-  /* Card Styling (Experience & Projects) */
-  .experience-card, .project-card, [class*="rounded-2xl"], [class*="border"] {
-    display: block !important;
-    margin-top: 1rem !important;
-    padding: 1rem !important;
-    border: 1px solid #e2e8f0 !important;
-    page-break-inside: avoid !important;
-    border-radius: 8px !important;
+  /* Ensure the Hero section looks perfect */
+  #home {
+    min-height: auto !important;
+    padding-top: 2rem !important;
   }
 
-  /* Text Legibility */
-  p, span, li {
-    font-size: 10.5pt !important;
-    color: #1e293b !important;
-    line-height: 1.5 !important;
-    margin-top: 0.5rem !important;
+  /* Fix background images/noise if they interfere */
+  .noise-bg::before {
+    display: none !important;
   }
 
-  /* Ensure tags/badges stay visible and inline */
-  .flex.gap-2, .flex-wrap {
+  /* Maintain grid/flex layouts exactly as they are on screen */
+  .grid, .flex {
     display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-    width: auto !important;
   }
-  
-  span[class*="bg-"], .badge {
-    display: inline-block !important;
-    width: auto !important;
-    padding: 2px 8px !important;
-    font-size: 9pt !important;
-    border-radius: 4px !important;
-  }
-
-  /* Force headers to start on new pages */
-  #experience, #projects {
-    page-break-before: always;
-  }
-
-  /* Image management */
-  .hero-image-container, img {
-    max-width: 200px !important;
-    margin: 1rem auto !important;
-    border-radius: 50% !important;
+  .grid {
+    display: grid !important;
   }
 }
