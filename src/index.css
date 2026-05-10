@@ -59,7 +59,7 @@ body {
 @media print {
   @page {
     size: A4;
-    margin: 1.25cm;
+    margin: 1.5cm;
   }
 
   /* Force color and background rendering in browsers */
@@ -69,78 +69,71 @@ body {
     background-color: white !important;
     color: black !important;
     width: 100% !important;
-    height: auto;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   body {
     font-size: 10.5pt;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   /* HIDE ALL WEB-ONLY INTERACTIVE ELEMENTS */
-  header,
-  nav,
-  footer,
-  button,
-  .no-print,
-  #terminal,
-  [role="navigation"],
-  .social-links,
-  a[href^="#"],
-  .stats-container,
-  .mouse-follower,
-  .noise-bg,
-  .timeline-line, /* Hide the gradient timeline line for clean print */
-  .scroll-indicator {
+  header, nav, footer, button, .no-print, #terminal, [role="navigation"],
+  .social-links, a[href^="#"], .stats-container, .mouse-follower, .noise-bg,
+  .timeline-line, .scroll-indicator, .hero-buttons, .contact-form-container button,
+  a.inline-flex.items-center, svg:not(.lucide) {
     display: none !important;
   }
 
-  /* Center the Hero section for a balanced 'Resume' look */
-  #home .max-w-6xl {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding-top: 0 !important;
-  }
-
-  /* Force 2-column layout for certifications/skills if they were multi-column */
-  .grid-cols-2, .grid-cols-3, .grid-cols-4, .grid-cols-5 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1rem !important;
-  }
-
-  /* Reset layout for print */
-  .max-w-6xl {
+  /* BULLETPROOF CONTAINER ALIGNMENT */
+  .max-w-6xl, .max-w-5xl, .max-w-7xl, [class*="max-w-"] {
+    width: 100% !important;
     max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    float: none !important;
   }
 
-  /* Remove all animations and transitions */
-  * {
-    transition: none !important;
-    animation: none !important;
-    transform: none !important;
-    scroll-behavior: auto !important;
+  /* FORCE SINGLE COLUMN FOR EVERYTHING (Better for A4) */
+  .grid, .flex {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Specific Hero alignment */
+  #home .max-w-6xl {
+    text-align: center !important;
+  }
+
+  /* Center headings */
+  h1, h2, h3 {
+    text-align: center !important;
+    page-break-after: avoid;
+    color: #000 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Fix for the 'Ravindran' name break */
+  h1 span {
+    display: inline !important;
   }
 
   /* Section management */
   section {
-    padding: 1rem 0 !important;
+    padding: 1.5rem 0 !important;
     page-break-inside: auto;
     border: none !important;
     background: transparent !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
-  h1, h2, h3 {
-    page-break-after: avoid;
-    color: #000 !important;
-    margin-bottom: 0.5rem !important;
-    margin-top: 1rem !important;
-  }
-
-  /* Ensure cards don't break awkwardly in the middle */
+  /* Ensure cards don't break awkwardly */
   .experience-card,
   .project-card,
   [class*="rounded-2xl"],
@@ -148,25 +141,32 @@ body {
     page-break-inside: avoid !important;
     border: 1px solid #e2e8f0 !important;
     box-shadow: none !important;
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
     background-color: #fff !important;
+    padding: 1.5rem !important;
+    width: 100% !important;
     display: block !important;
-    padding: 1.25rem !important;
   }
 
-  /* Force headers to start on new pages for a clean look */
+  /* Force headers to start on new pages */
   #experience, #projects {
     page-break-before: always;
   }
 
   /* Adjust typography for print */
   .text-slate-500, .text-slate-400 {
-    color: #4b5563 !important; /* Slightly darker for better print legibility */
+    color: #334155 !important;
   }
 
   /* Link handling */
   a {
     text-decoration: none !important;
     color: #0f172a !important;
+  }
+
+  /* Image handling - hide the large profile image in print if it causes issues, or center it */
+  .hero-image-container, [class*="aspect-square"] {
+    max-width: 250px !important;
+    margin: 1rem auto !important;
   }
 }
