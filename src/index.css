@@ -126,6 +126,15 @@ body {
     display: grid !important;
   }
 
+  /* FORCE EACH SECTION TO START ON A NEW PAGE */
+  #experience, 
+  #projects, 
+  #contact {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 3cm !important; /* Give some top margin on new pages */
+  }
+
   #home {
     min-height: auto !important;
     padding-top: 2rem !important;
