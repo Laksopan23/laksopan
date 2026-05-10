@@ -102,28 +102,44 @@ body {
     display: none !important;
   }
 
-  /* Keep the exact layout structure */
+  /* Keep the exact layout structure but handle page breaks better */
   section {
-    page-break-inside: avoid;
-    padding: 4rem 2rem !important;
+    page-break-inside: auto;
+    padding: 2rem 0 !important;
+    display: block !important;
   }
 
-  /* Ensure the Hero section looks perfect */
-  #home {
-    min-height: auto !important;
-    padding-top: 2rem !important;
+  /* ZERO-CUT LOGIC: Never break cards or key blocks in half */
+  .experience-card, 
+  .project-card, 
+  .certification-card,
+  [class*="rounded-2xl"], 
+  [class*="border"],
+  .contact-info-block,
+  article,
+  #contact > div > div {
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+    display: block !important;
+    margin-bottom: 2rem !important;
+    position: relative !important;
   }
 
-  /* Fix background images/noise if they interfere */
-  .noise-bg::before {
-    display: none !important;
+  /* Force sections to start on new pages if they are getting too cramped */
+  #experience, #projects, #contact {
+    page-break-before: auto;
+    margin-top: 2rem !important;
   }
 
-  /* Maintain grid/flex layouts exactly as they are on screen */
+  /* Maintain grid/flex layouts only where necessary, otherwise stack */
   .grid, .flex {
-    display: flex !important;
+    display: block !important; /* Stack blocks for better page break control */
   }
-  .grid {
-    display: grid !important;
+
+  /* Ensure the Hero section stays together */
+  #home {
+    page-break-inside: avoid !important;
+    min-height: auto !important;
+    padding-top: 1rem !important;
   }
 }
