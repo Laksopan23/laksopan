@@ -49,9 +49,9 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="group">
-            <BrandLogo size={32} />
-          </a>
+          <div className="flex items-center">
+            <BrandLogo size={32} disableHover={true} />
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
