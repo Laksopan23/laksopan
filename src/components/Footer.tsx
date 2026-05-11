@@ -1,4 +1,5 @@
-import { Terminal, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,7 @@ export default function Footer() {
           {/* Logo & Subtitle */}
           <div className="flex flex-col items-center sm:items-start gap-1">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-slate-900 rounded-lg flex items-center justify-center">
-                <Terminal className="w-3.5 h-3.5 text-white" />
-              </div>
+              <BrandLogo size={28} iconOnly={true} />
               <span className="font-bold text-slate-900 tracking-tight text-sm">
                 Laksopan<span className="text-slate-400">.</span>
               </span>

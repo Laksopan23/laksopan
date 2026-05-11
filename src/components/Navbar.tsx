@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 import { navLinks } from '../data/portfolio';
 
@@ -48,13 +49,8 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
-              <Terminal className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-bold text-slate-900 tracking-tight text-sm hidden sm:block">
-              LR<span className="text-slate-400">.</span>
-            </span>
+          <a href="#" className="group">
+            <BrandLogo size={32} />
           </a>
 
           {/* Desktop Nav */}
