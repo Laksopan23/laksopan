@@ -34,7 +34,7 @@ export default function About() {
 
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                I am a Software Engineering undergraduate at <span className="font-semibold text-slate-800">SLIIT</span> with 
+                My name is <span className="font-semibold text-slate-800">Laksopan Ravindran</span>, and I am a Software Engineering undergraduate at <span className="font-semibold text-slate-800">SLIIT</span> with 
                 internship experience building and deploying full-stack applications using the <span className="font-semibold text-slate-800">MERN stack, Next.js, and Django</span>.
               </p>
               <p>
