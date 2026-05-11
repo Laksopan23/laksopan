@@ -4,14 +4,15 @@ interface BrandLogoProps {
   className?: string;
   size?: number;
   iconOnly?: boolean;
+  disableHover?: boolean;
 }
 
-export default function BrandLogo({ className = '', size = 32, iconOnly = false }: BrandLogoProps) {
+export default function BrandLogo({ className = '', size = 32, iconOnly = false, disableHover = false }: BrandLogoProps) {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
       <div 
         style={{ width: size, height: size }}
-        className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+        className={`rounded-lg overflow-hidden ${!disableHover ? 'shadow-sm hover:shadow-md transition-shadow duration-300' : ''}`}
       >
         <img 
           src="/favicon.png" 

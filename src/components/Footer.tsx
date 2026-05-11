@@ -10,12 +10,12 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo & Subtitle */}
           <div className="flex flex-col items-center sm:items-start gap-1">
-            <a href="#hero" className="flex items-center gap-2 group transition-opacity hover:opacity-80">
-              <BrandLogo size={28} iconOnly={true} />
+            <div className="flex items-center gap-2">
+              <BrandLogo size={28} iconOnly={true} disableHover={true} />
               <span className="font-bold text-slate-900 tracking-tight text-sm">
                 Laksopan<span className="text-slate-400">.</span>
               </span>
-            </a>
+            </div>
             <p className="text-[10px] text-slate-400 font-medium">
               Information Technology Undergraduate | Sri Lanka
             </p>
