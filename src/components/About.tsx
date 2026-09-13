@@ -28,8 +28,8 @@ export default function About() {
               01 - Personal Journey
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-              I build digital products<br />
-              <span className="text-slate-400">that blend engineering with impact</span>.
+              Building software with<br />
+              <span className="text-slate-400">purpose and precision</span>.
             </h2>
 
             <div className="space-y-4 text-slate-600 leading-relaxed">

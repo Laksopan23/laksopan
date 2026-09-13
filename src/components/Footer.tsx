@@ -17,7 +17,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-[10px] text-slate-400 font-medium">
-              Software Engineer • AI & Full-Stack Product Builder
+              Software Engineer | Sri Lanka
             </p>
           </div>
 
