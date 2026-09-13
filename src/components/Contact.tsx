@@ -22,6 +22,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [isSending, setIsSending] = useState(false);
 
   const handleCopy = () => {
@@ -33,9 +34,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
+    setSubmitError('');
     
     try {
-      // Note: Ensure you have a valid Formspree endpoint or replace this URL
       const response = await fetch('https://formsubmit.co/ajax/laksopan2001@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -46,10 +47,10 @@ export default function Contact() {
         setSubmitted(true);
         setFormState({ name: '', email: '', message: '' });
       } else {
-        alert('Something went wrong. Please try again later.');
+        setSubmitError('Something went wrong. Please try again later.');
       }
-    } catch (error) {
-      alert('Error sending message. Please check your connection.');
+    } catch {
+      setSubmitError('Unable to send your message. Please check your connection and try again.');
     } finally {
       setIsSending(false);
     }
@@ -86,11 +87,9 @@ export default function Contact() {
             className="lg:col-span-2 space-y-8"
           >
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Get In Touch</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Let’s build something meaningful</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                I'm actively looking for full-time Full-Stack & AI Engineer roles and freelance
-                collaborations. Whether you have an opportunity or just want to connect - my inbox
-                is always open.
+                I’m open to full-time product engineering roles, AI-focused collaborations, and freelance work where thoughtful software can create measurable impact.
               </p>
             </div>
 
@@ -136,7 +135,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-slate-400 font-medium">Location</p>
-                  <p className="text-sm font-semibold text-slate-700">168/5 Veliwita Rd, Malabe</p>
+                  <p className="text-sm font-semibold text-slate-700">Batticaloa, Sri Lanka · Open to Colombo and Remote Opportunities</p>
                 </div>
               </div>
             </div>
@@ -156,7 +155,7 @@ export default function Contact() {
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-300" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/laksopan-ravindran-92612224b/"
+                  href="https://www.linkedin.com/in/laksopan-ravindran-2109672a5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-600 hover:text-slate-900 hover:border-slate-400 hover:shadow-sm transition-all duration-200 text-sm font-semibold"
@@ -210,6 +209,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         value={formState.name}
                         onChange={e => setFormState(s => ({ ...s, name: e.target.value }))}
@@ -223,6 +223,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         value={formState.email}
                         onChange={e => setFormState(s => ({ ...s, email: e.target.value }))}
@@ -238,6 +239,7 @@ export default function Contact() {
                     </label>
                     <textarea
                       required
+                      name="message"
                       value={formState.message}
                       onChange={e => setFormState(s => ({ ...s, message: e.target.value }))}
                       rows={6}
@@ -254,6 +256,11 @@ export default function Contact() {
                     <Send className={`w-4 h-4 ${isSending ? '' : 'group-hover:translate-x-0.5 transition-transform'}`} />
                     {isSending ? 'Sending...' : 'Send Message'}
                   </button>
+                  {submitError && (
+                    <p role="alert" className="text-sm text-red-600 text-center">
+                      {submitError}
+                    </p>
+                  )}
                 </form>
               )}
             </div>
