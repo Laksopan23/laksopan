@@ -94,12 +94,13 @@ const colorMap: Record<string, { bg: string; bar: string; icon: string; badge: s
 function SkillBar({ name, level, barColor, delay }: { name: string; level: number; barColor: string; delay: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-40px' });
+  const proficiency = level >= 88 ? 'Advanced' : level >= 75 ? 'Intermediate' : 'Working knowledge';
 
   return (
     <div ref={ref} className="space-y-1.5">
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium text-slate-700">{name}</span>
-        <span className="text-xs font-bold text-slate-400">{level}%</span>
+        <span className="text-xs font-bold text-slate-400">{proficiency}</span>
       </div>
       <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
         <motion.div
@@ -140,10 +141,10 @@ export default function Skills() {
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-              Skill Matrix<span className="text-slate-300">.</span>
+              Engineering toolkit<span className="text-slate-300">.</span>
             </h2>
             <p className="text-slate-500 text-sm max-w-sm">
-              Proficiency across the full SDLC - from pixel-perfect UIs to distributed backend systems.
+              I work across product design, backend architecture, and AI-powered experiences to ship meaningful digital solutions.
             </p>
           </div>
           <div className="mt-6 h-px bg-slate-100" />

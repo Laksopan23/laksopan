@@ -186,7 +186,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full">
               <span className="w-1.5 h-1.5 bg-slate-500 rounded-full" />
-              Open to new opportunities
+              Open for product engineering & AI collaborations
             </span>
           </motion.div>
 
@@ -203,7 +203,7 @@ export default function Hero() {
               <span className="text-slate-500">Ravindran</span><span className="text-slate-300">.</span>
             </h1>
             <p className="text-2xl sm:text-3xl font-medium text-slate-900 tracking-tight mt-6">
-              Full-Stack & AI Engineer<span className="text-slate-300">.</span>
+              Software Engineer building AI-driven products<span className="text-slate-300">.</span>
             </p>
           </motion.div>
 
@@ -215,10 +215,10 @@ export default function Hero() {
             }}
             className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-lg"
           >
-            Architecting scalable full-stack applications with a core focus on{' '}
-            <span className="text-slate-700 font-medium">Artificial Intelligence</span>,{' '}
-            <span className="text-slate-700 font-medium">Distributed Systems</span>, and{' '}
-            <span className="text-slate-700 font-medium">Cloud Architecture</span>.
+            I design and build scalable web experiences at the intersection of{' '}
+            <span className="text-slate-700 font-medium">full-stack engineering</span>,{' '}
+            <span className="text-slate-700 font-medium">applied AI</span>, and{' '}
+            <span className="text-slate-700 font-medium">product thinking</span>.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -233,16 +233,15 @@ export default function Hero() {
               href="#projects"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-700 transition-all duration-200 shadow-sm hover:shadow-md"
             >
-              View Projects
+              See my work
               <ArrowDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             </a>
             <a
-              href="/assets/laksopan_resume.pdf"
-              download
+              href="mailto:laksopan2001@gmail.com?subject=Project%20Opportunity"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-700 text-sm font-semibold rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
             >
               <Download className="w-4 h-4" />
-              Download CV
+              Let’s connect
             </a>
           </motion.div>
 
@@ -266,7 +265,7 @@ export default function Hero() {
                 <GitHubIcon />
               </a>
               <a
-                href="https://www.linkedin.com/in/laksopan-ravindran-92612224b/"
+                href="https://www.linkedin.com/in/laksopan-ravindran-2109672a5"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -285,7 +284,7 @@ export default function Hero() {
 
             <div className="flex gap-2 ml-1">
               <div className="text-center px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg">
-                <p className="text-xs font-bold text-slate-900">7</p>
+                <p className="text-xs font-bold text-slate-900">8</p>
                 <p className="text-[10px] text-slate-400 font-medium">Projects</p>
               </div>
               <div className="text-center px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg">

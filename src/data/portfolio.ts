@@ -13,6 +13,25 @@ export const navLinks = [
 
 export const experiences: Experience[] = [
   {
+    company: 'DGateway In',
+    role: 'Associate Software Engineer',
+    period: 'Sep 2025 – Present',
+    location: 'Malabe, Sri Lanka',
+    type: 'Full-Time',
+    color: 'emerald',
+    logo: dgatewayinLogo,
+    url: 'https://dgatewayin.com/',
+    description:
+      'Developing and maintaining full-stack applications while supporting testing, deployment, optimization, and project handover.',
+    highlights: [
+      'Developing MERN stack applications with reusable React components and RESTful backend services',
+      'Building APIs with CRUD operations, business logic, request validation, error handling, and data management',
+      'Implementing secure password hashing and JWT-based authentication workflows',
+      'Supporting debugging, refactoring, QA verification, deployment setup, and CI/CD workflows',
+    ],
+    tags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT', 'CI/CD'],
+  },
+  {
     company: 'Freelance',
     role: 'Full-Stack & AI Engineer',
     period: 'Jan 2026 – Present',
@@ -75,11 +94,32 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    title: 'PortIntel',
+    subtitle: 'Offline Port Intelligence & Safety Supervisor',
+    description:
+      'An offline-first desktop utility that analyzes active TCP and UDP ports, classifies process risk with embedded machine learning, and prevents unsafe process termination.',
+    tags: ['React', 'TypeScript', 'Tauri', 'Rust', 'ONNX', 'Tailwind CSS'],
+    highlight: 'Desktop AI',
+    highlightColor: 'blue',
+    features: [
+      'Scans active sockets across Windows, macOS, and Linux using native system tools',
+      'Runs offline ONNX inference through a Rust backend without cloud API keys',
+      'Groups ports by development servers, databases, Docker containers, system daemons, and utilities',
+      'Uses hard safety overrides to prevent termination of protected operating-system processes',
+    ],
+    stars: 0,
+    forks: 0,
+    github: 'https://github.com/Laksopan23/PortIntel',
+    demo: '#',
+    accent: 'from-blue-500 to-cyan-600',
+    accentLight: 'bg-blue-50 border-blue-200',
+  },
+  {
     title: 'ProteqHer SOS Listener',
-    subtitle: 'AI-Powered Emergency Response',
+    subtitle: 'AI-Powered Emergency Response · In Development',
     description:
       'A high-reliability safety application that utilizes on-device ML to monitor for distress signals and trigger instant emergency assistance.',
-    tags: ['Flutter', 'Dart', 'Machine Learning', 'Android Services', 'Safety Tech'],
+    tags: ['Flutter', 'Dart', 'TensorFlow Lite', 'Machine Learning', 'Android Services'],
     highlight: 'ML / Mobile',
     highlightColor: 'violet',
     features: [
@@ -139,10 +179,10 @@ export const projects: Project[] = [
   },
   {
     title: 'Appointment Booking System',
-    subtitle: 'MERN Stack Platform',
+    subtitle: 'Next.js Booking Platform',
     description:
       'A comprehensive booking system designed for service providers to manage appointments and schedules efficiently.',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     highlight: 'Full-Stack',
     highlightColor: 'blue',
     features: [
@@ -162,7 +202,7 @@ export const projects: Project[] = [
     subtitle: 'AI-Powered Screening Tool',
     description:
       'An intelligent system that analyzes resumes and matches them to job descriptions using semantic similarity.',
-    tags: ['Python', 'SBERT', 'NLP', 'Flask', 'React'],
+    tags: ['Python', 'Streamlit', 'SBERT', 'TF-IDF'],
     highlight: 'AI / ML',
     highlightColor: 'violet',
     features: [
@@ -181,8 +221,8 @@ export const projects: Project[] = [
     title: 'Brain Tumor Detection',
     subtitle: 'Medical AI Classification',
     description:
-      'Deep learning models for detecting brain tumors from MRI scans using CNN architectures.',
-    tags: ['Python', 'PyTorch', 'CNN', 'Jupyter'],
+      'Deep learning models for detecting brain tumors from MRI scans using TensorFlow and established CNN architectures.',
+    tags: ['TensorFlow', 'Keras', 'CNN', 'VGG19', 'InceptionV3', 'YOLOv11'],
     highlight: 'Deep Learning',
     highlightColor: 'violet',
     features: [
@@ -199,16 +239,16 @@ export const projects: Project[] = [
   },
   {
     title: 'Bakery Management',
-    subtitle: 'Java Operations System',
+    subtitle: 'Spring Boot Operations System',
     description:
-      'A desktop application for managing bakery sales, inventory, and order processing.',
-    tags: ['Java', 'MySQL', 'Inventory Management'],
+      'A Java and JSP application for managing bakery sales, inventory, and order processing with file-based persistence.',
+    tags: ['Spring Boot', 'Java', 'JSP', 'File-Based Persistence'],
     highlight: 'Desktop App',
     highlightColor: 'emerald',
     features: [
       'Full inventory and order management system for daily operations',
       'Automated sales report generation and revenue tracking',
-      'User-friendly desktop interface built for retail staff',
+      'Spring Boot services and JSP views for a user-friendly retail operations workflow',
     ],
     stars: 0,
     forks: 0,
@@ -218,3 +258,19 @@ export const projects: Project[] = [
     accentLight: 'bg-amber-50 border-amber-200',
   },
 ];
+
+const featuredProjectOrder = [
+  'PortIntel',
+  'Appointment Booking System',
+  'EduInsight',
+  'Resume Matcher AI',
+  'SkillZone',
+  'ProteqHer SOS Listener',
+];
+
+projects.sort((a, b) => {
+  const aIndex = featuredProjectOrder.indexOf(a.title);
+  const bIndex = featuredProjectOrder.indexOf(b.title);
+  return (aIndex === -1 ? featuredProjectOrder.length : aIndex) -
+    (bIndex === -1 ? featuredProjectOrder.length : bIndex);
+});

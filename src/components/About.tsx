@@ -28,23 +28,19 @@ export default function About() {
               01 - Personal Journey
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-              Building software with<br />
-              <span className="text-slate-400">purpose and precision</span>.
+              I build digital products<br />
+              <span className="text-slate-400">that blend engineering with impact</span>.
             </h2>
 
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                My name is <span className="font-semibold text-slate-800">Laksopan Ravindran</span>, and I am a Software Engineering undergraduate at <span className="font-semibold text-slate-800">SLIIT</span> with 
-                internship experience building and deploying full-stack applications using the <span className="font-semibold text-slate-800">MERN stack, Next.js, and Django</span>.
+                I’m <span className="font-semibold text-slate-800">Laksopan Ravindran</span>, a Software Engineer with a <span className="font-semibold text-slate-800">BSc Hons in Information Technology from SLIIT</span> and over one year of experience developing full-stack web and mobile applications. My work sits at the intersection of <span className="font-semibold text-slate-800">full-stack development</span>, <span className="font-semibold text-slate-800">applied AI</span>, and <span className="font-semibold text-slate-800">product engineering</span>.
               </p>
               <p>
-                Having completed internships at <span className="font-semibold text-slate-800">Remotechies</span> and <span className="font-semibold text-slate-800">DGatewayIn</span>, I have developed a deep understanding of 
-                responsive UI design with Tailwind CSS, implementing RESTful APIs, and working with 
-                distributed databases like PostgreSQL and Supabase.
+                I currently work as an <span className="font-semibold text-slate-800">Associate Software Engineer at DGateway In</span>, alongside freelance product work. Previously, I completed internships at <span className="font-semibold text-slate-800">Remotechies</span> and DGatewayIn, contributing to production-ready systems across frontend, backend, deployment, and performance optimization.
               </p>
               <p>
-                I am experienced in deploying and maintaining applications across <span className="font-semibold text-slate-800">AWS, Hostinger, and Coolify</span>, and I thrive in 
-                collaborative, agile team environments where precision and performance are key.
+                My experience spans <span className="font-semibold text-slate-800">React, Next.js, Django, Laravel, Node.js, and Flutter</span>, cloud deployment, secure authentication, REST APIs, and AI-powered features, with a focus on building tools that are reliable and useful in real-world settings.
               </p>
             </div>
 
@@ -109,7 +105,7 @@ export default function About() {
                 <div>
                   <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Focusing on</p>
                   <p className="text-base font-bold">Artificial Intelligence & AI-Powered Web Systems</p>
-                  <p className="text-[10px] text-slate-500 font-medium mt-1">Jan 2026 - Present</p>
+                  <p className="text-[10px] text-slate-500 font-medium mt-1">BSc Hons in Information Technology · SLIIT · 2022 - 2026</p>
                 </div>
                 <div className="flex gap-6">
                   <div className="text-center">
