@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laksopan Ravindran | Full-Stack & AI Engineer Portfolio</title>
+    <title>Laksopan | Laksopan Ravindran - Software Engineer</title>
     <meta name="google-site-verification" content="ySFDiy-kbHV0bX38kSlh_buDHsgBL56pN3rvWlNLkP4" />
     <meta name="description" content="Official portfolio of Laksopan Ravindran, a Software Engineer with a BSc Hons in Information Technology from SLIIT and over one year of experience building full-stack web and mobile applications." />
-    <meta name="keywords" content="Laksopan, Laksopan Ravindran, Software Engineer, Full-Stack Developer, AI Engineer, SLIIT, Portfolio, Sri Lanka, Web Development, React Developer" />
+    <meta name="keywords" content="Laksopan Ravindran, Laksopan Software Engineer, Full-Stack AI Engineer Sri Lanka, React Developer, SLIIT Software Engineer, PortIntel" />
     <meta name="author" content="Laksopan Ravindran" />
+    <meta name="subject" content="Official professional profile of Laksopan Ravindran" />
+    <meta name="classification" content="Software engineering portfolio" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <link rel="canonical" href="https://laksopan.is-a.dev/" />
     
     <!-- Favicon -->
@@ -17,36 +21,79 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://laksopan.is-a.dev/" />
-    <meta property="og:title" content="Laksopan Ravindran | Full-Stack & AI Engineer" />
-    <meta property="og:description" content="Building high-performance full-stack applications with AI integration. Explore my projects and professional journey." />
+    <meta property="og:title" content="Laksopan Ravindran | Software Engineer, Full-Stack & AI" />
+    <meta property="og:description" content="Official portfolio of Laksopan Ravindran, a Sri Lankan Software Engineer building full-stack web, mobile, and AI-powered products." />
     <meta property="og:site_name" content="Laksopan Ravindran Portfolio" />
-    <meta property="og:image" content="/favicon.png" />
+    <meta property="og:image" content="https://laksopan.is-a.dev/favicon.png" />
+    <meta property="og:image:alt" content="Laksopan Ravindran portfolio logo" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://laksopan.is-a.dev/" />
-    <meta property="twitter:title" content="Laksopan Ravindran | Full-Stack & AI Engineer" />
-    <meta property="twitter:description" content="Building high-performance full-stack applications with AI integration. Explore my projects and professional journey." />
-    <meta property="twitter:image" content="/favicon.png" />
+    <meta property="twitter:title" content="Laksopan Ravindran | Software Engineer, Full-Stack & AI" />
+    <meta property="twitter:description" content="Official portfolio of Laksopan Ravindran, a Sri Lankan Software Engineer building full-stack web, mobile, and AI-powered products." />
+    <meta property="twitter:image" content="https://laksopan.is-a.dev/favicon.png" />
+    <meta property="twitter:image:alt" content="Laksopan Ravindran portfolio logo" />
 
-    <!-- JSON-LD Structured Data for Person -->
+    <!-- JSON-LD entity and website structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Laksopan Ravindran",
-        "url": "https://laksopan.is-a.dev/",
-        "image": "https://laksopan.is-a.dev/favicon.png",
-        "sameAs": [
-          "https://github.com/Laksopan23",
-          "https://www.linkedin.com/in/laksopan-ravindran-2109672a5"
-        ],
-        "jobTitle": "Software Engineer",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "SLIIT"
-        },
-        "description": "Full-Stack Software Engineer specializing in React, Next.js, Django, and AI integration."
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://laksopan.is-a.dev/#profile",
+            "url": "https://laksopan.is-a.dev/",
+            "name": "Laksopan Ravindran | Software Engineer, Full-Stack & AI",
+            "isPartOf": { "@id": "https://laksopan.is-a.dev/#website" },
+            "mainEntity": { "@id": "https://laksopan.is-a.dev/#person" }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://laksopan.is-a.dev/#website",
+            "url": "https://laksopan.is-a.dev/",
+            "name": "Laksopan | Laksopan Ravindran Portfolio",
+            "description": "Official portfolio and professional profile of Laksopan Ravindran.",
+            "publisher": { "@id": "https://laksopan.is-a.dev/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://laksopan.is-a.dev/#person",
+            "name": "Laksopan Ravindran",
+            "alternateName": ["Laksopan", "Laksopan23"],
+            "url": "https://laksopan.is-a.dev/",
+            "image": "https://laksopan.is-a.dev/favicon.png",
+            "sameAs": [
+              "https://github.com/Laksopan23",
+              "https://www.linkedin.com/in/laksopan-ravindran-2109672a5"
+            ],
+            "jobTitle": "Software Engineer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "DGateway In",
+              "url": "https://dgatewayin.com/"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Sri Lanka Institute of Information Technology",
+              "alternateName": "SLIIT"
+            },
+            "knowsAbout": [
+              "Full-stack software engineering",
+              "Artificial intelligence",
+              "React",
+              "Next.js",
+              "Node.js",
+              "Django",
+              "Flutter",
+              "Cloud deployment"
+            ],
+            "homeLocation": {
+              "@type": "Place",
+              "name": "Sri Lanka"
+            }
+          }
+        ]
       }
     </script>
 

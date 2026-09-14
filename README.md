@@ -37,4 +37,4 @@ npm run build
 
 - **Email**: laksopan2301@gmail.com
 - **GitHub**: [@Laksopan23](https://github.com/Laksopan23)
-- **LinkedIn**: [Ravindran Laksopan](https://linkedin.com/in/laksopan)
+- **LinkedIn**: [Ravindran Laksopan](https://www.linkedin.com/in/laksopan-ravindran-2109672a5)

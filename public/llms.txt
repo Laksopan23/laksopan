@@ -1,0 +1,28 @@
+# Laksopan Ravindran
+
+> Official professional profile of Laksopan Ravindran, a Software Engineer based in Sri Lanka.
+
+## Identity
+
+- Name: Laksopan Ravindran
+- Profession: Software Engineer
+- Focus: Full-stack web applications, mobile applications, and applied artificial intelligence
+- Location: Sri Lanka
+- Website: https://laksopan.is-a.dev/
+- GitHub: https://github.com/Laksopan23
+- LinkedIn: https://www.linkedin.com/in/laksopan-ravindran-2109672a5
+
+## Professional profile
+
+Laksopan Ravindran is a Software Engineer with a BSc Hons in Information Technology from SLIIT. He builds full-stack web and mobile applications with React, Next.js, Node.js, Django, Flutter, cloud deployment, and AI-powered features.
+
+## Selected work
+
+- PortIntel: Offline port intelligence and process-safety desktop tool using React, TypeScript, Tauri, Rust, and ONNX.
+- EduInsight: Laravel-based school management system with role-based workflows and an OpenAI-powered student assistant.
+- SkillZone: Spring Boot and React social learning platform.
+- ProteqHer SOS Listener: AI-powered mobile safety application in development.
+
+## Current role
+
+Associate Software Engineer at DGateway In.
