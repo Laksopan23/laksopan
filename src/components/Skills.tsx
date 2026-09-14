@@ -13,6 +13,7 @@ const skillCategories = [
       { name: 'TypeScript', level: 85 },
       { name: 'Tailwind CSS', level: 90 },
       { name: 'Flutter', level: 72 },
+      { name: 'Tauri', level: 70 },
     ],
   },
   {
@@ -25,6 +26,7 @@ const skillCategories = [
       { name: 'Python', level: 88 },
       { name: 'Django', level: 82 },
       { name: 'REST APIs', level: 90 },
+      { name: 'Rust', level: 68 },
     ],
   },
   {
@@ -37,6 +39,7 @@ const skillCategories = [
       { name: 'NLP (Transformers)', level: 84 },
       { name: 'Computer Vision', level: 78 },
       { name: 'Generative AI', level: 88 },
+      { name: 'LLM Orchestration', level: 78 },
     ],
   },
   {
@@ -60,6 +63,7 @@ const skillCategories = [
       { name: 'Docker', level: 80 },
       { name: 'Coolify', level: 72 },
       { name: 'Git / CI/CD', level: 88 },
+      { name: 'Ollama', level: 72 },
     ],
   },
 ];
@@ -116,9 +120,10 @@ function SkillBar({ name, level, barColor, delay }: { name: string; level: numbe
 
 // Tag-cloud style additional skills
 const extraSkills = [
-  'PHP', 'Laravel', 'Bootstrap', 'Hostinger', 'Java', 'Kotlin', 'C / C++', 
-  'SBERT', 'Prisma', 'JWT', 'Socket.io', 'Redis', 'GraphQL', 'Nginx', 
-  'Linux', 'Figma', 'Postman', 'Jest',
+  'PHP', 'Laravel', 'Bootstrap', 'Hostinger', 'Java', 'Kotlin', 'C / C++',
+  'SBERT', 'Prisma', 'JWT', 'Socket.io', 'Redis', 'GraphQL', 'Nginx',
+  'Linux', 'Figma', 'Postman', 'Jest', 'Gemini', 'Groq', 'Llama',
+  'ChromaDB', 'PyAutoGUI', 'Speech Recognition', 'Whisper', 'edge-tts',
 ];
 
 export default function Skills() {

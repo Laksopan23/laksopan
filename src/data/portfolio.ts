@@ -115,6 +115,27 @@ export const projects: Project[] = [
     accentLight: 'bg-blue-50 border-blue-200',
   },
   {
+    title: 'OSCAR',
+    subtitle: 'Autonomous AI Desktop Assistant',
+    description:
+      'A fully autonomous desktop assistant that combines voice interaction, hybrid cloud and local vision, long-term semantic memory, and safe PC automation.',
+    tags: ['Python', 'Gemini', 'Groq', 'Ollama', 'ChromaDB', 'PyAutoGUI'],
+    highlight: 'AI Assistant',
+    highlightColor: 'violet',
+    features: [
+      'Maintains continuous voice conversations with wake-word detection and automatic speech-end detection',
+      'Routes screen analysis across Gemini, Groq Llama Vision, and local Ollama LLaVA models',
+      'Stores semantic memories locally with ChromaDB to personalize future interactions',
+      'Automates desktop tasks through a crash-recovering tool pipeline and PyAutoGUI',
+    ],
+    stars: 0,
+    forks: 0,
+    github: 'https://github.com/Laksopan23/OSCAR',
+    demo: '#',
+    accent: 'from-violet-500 to-fuchsia-600',
+    accentLight: 'bg-violet-50 border-violet-200',
+  },
+  {
     title: 'ProteqHer SOS Listener',
     subtitle: 'AI-Powered Emergency Response · In Development',
     description:
@@ -261,6 +282,7 @@ export const projects: Project[] = [
 
 const featuredProjectOrder = [
   'PortIntel',
+  'OSCAR',
   'Appointment Booking System',
   'EduInsight',
   'Resume Matcher AI',
