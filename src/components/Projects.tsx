@@ -14,6 +14,11 @@ const highlightColorMap: Record<string, string> = {
   violet: 'bg-violet-100 text-violet-700',
   blue: 'bg-blue-100 text-blue-700',
   emerald: 'bg-emerald-100 text-emerald-700',
+  cyan: 'bg-cyan-100 text-cyan-700',
+  indigo: 'bg-indigo-100 text-indigo-700',
+  pink: 'bg-pink-100 text-pink-700',
+  rose: 'bg-rose-100 text-rose-700',
+  amber: 'bg-amber-100 text-amber-700',
 };
 
 function ProjectCard({ project, index, inView }: { project: typeof projects[0]; index: number; inView: boolean }) {

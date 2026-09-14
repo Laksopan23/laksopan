@@ -121,7 +121,7 @@ export const projects: Project[] = [
       'A high-reliability safety application that utilizes on-device ML to monitor for distress signals and trigger instant emergency assistance.',
     tags: ['Flutter', 'Dart', 'TensorFlow Lite', 'Machine Learning', 'Android Services'],
     highlight: 'ML / Mobile',
-    highlightColor: 'violet',
+    highlightColor: 'pink',
     features: [
       'Monitors for screams or distress calls using on-device sound classification models',
       'Runs as a persistent Android Foreground Service to ensure protection even when locked',
@@ -132,8 +132,8 @@ export const projects: Project[] = [
     forks: 0,
     github: 'https://github.com/Laksopan23/proteqher-sos-listener',
     demo: '#',
-    accent: 'from-violet-500 to-purple-600',
-    accentLight: 'bg-violet-50 border-violet-200',
+    accent: 'from-pink-500 to-rose-600',
+    accentLight: 'bg-pink-50 border-pink-200',
   },
   {
     title: 'SkillZone',
@@ -163,7 +163,7 @@ export const projects: Project[] = [
       'A comprehensive Laravel-based management system for students, teachers, guardians, and academic operations.',
     tags: ['Laravel 10', 'PHP 8.1', 'MySQL', 'OpenAI', 'DomPDF'],
     highlight: 'Enterprise System',
-    highlightColor: 'blue',
+    highlightColor: 'indigo',
     features: [
       'Role-based management for 5 user types: Admin, Teacher, Student, Parent, and Guardian',
       'Academic tracking with exam scheduling, results management, and PDF report generation',
@@ -174,8 +174,8 @@ export const projects: Project[] = [
     forks: 0,
     github: 'https://github.com/Laksopan23/EduInsight',
     demo: '#',
-    accent: 'from-blue-500 to-indigo-600',
-    accentLight: 'bg-blue-50 border-blue-200',
+    accent: 'from-indigo-500 to-blue-600',
+    accentLight: 'bg-indigo-50 border-indigo-200',
   },
   {
     title: 'Appointment Booking System',
@@ -184,7 +184,7 @@ export const projects: Project[] = [
       'A comprehensive booking system designed for service providers to manage appointments and schedules efficiently.',
     tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     highlight: 'Full-Stack',
-    highlightColor: 'blue',
+    highlightColor: 'cyan',
     features: [
       'Developed a responsive appointment management system with secure authentication',
       'Integrated calendar views and real-time availability tracking for users',
@@ -194,8 +194,8 @@ export const projects: Project[] = [
     forks: 0,
     github: 'https://github.com/Laksopan23/appointment-booking-system',
     demo: '#',
-    accent: 'from-blue-500 to-cyan-600',
-    accentLight: 'bg-blue-50 border-blue-200',
+    accent: 'from-cyan-500 to-sky-600',
+    accentLight: 'bg-cyan-50 border-cyan-200',
   },
   {
     title: 'Resume Matcher AI',
@@ -224,7 +224,7 @@ export const projects: Project[] = [
       'Deep learning models for detecting brain tumors from MRI scans using TensorFlow and established CNN architectures.',
     tags: ['TensorFlow', 'Keras', 'CNN', 'VGG19', 'InceptionV3', 'YOLOv11'],
     highlight: 'Deep Learning',
-    highlightColor: 'violet',
+    highlightColor: 'rose',
     features: [
       'Trained CNN models for high-accuracy medical image classification',
       'Automated preprocessing of MRI data for consistent inference',
@@ -234,8 +234,8 @@ export const projects: Project[] = [
     forks: 0,
     github: 'https://github.com/Laksopan23/Brain-Tumor-Detection-Models',
     demo: '#',
-    accent: 'from-purple-500 to-pink-600',
-    accentLight: 'bg-purple-50 border-purple-200',
+    accent: 'from-rose-500 to-red-600',
+    accentLight: 'bg-rose-50 border-rose-200',
   },
   {
     title: 'Bakery Management',
@@ -244,7 +244,7 @@ export const projects: Project[] = [
       'A Java and JSP application for managing bakery sales, inventory, and order processing with file-based persistence.',
     tags: ['Spring Boot', 'Java', 'JSP', 'File-Based Persistence'],
     highlight: 'Desktop App',
-    highlightColor: 'emerald',
+    highlightColor: 'amber',
     features: [
       'Full inventory and order management system for daily operations',
       'Automated sales report generation and revenue tracking',
