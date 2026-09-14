@@ -14,6 +14,7 @@ const skillCategories = [
       { name: 'Tailwind CSS', level: 90 },
       { name: 'Flutter', level: 72 },
       { name: 'Tauri', level: 70 },
+      { name: 'Vue', level: 65 },
     ],
   },
   {
@@ -25,9 +26,11 @@ const skillCategories = [
       { name: 'Laravel', level: 80 },
       { name: 'Python', level: 88 },
       { name: 'Django', level: 82 },
+      { name: 'FastAPI', level: 70 },
+      { name: 'Spring Boot', level: 74 },
+      { name: 'C# / .NET', level: 65 },
       { name: 'REST APIs', level: 90 },
       { name: 'Rust', level: 68 },
-      { name: 'Spring Boot', level: 74 },
     ],
   },
   {
@@ -40,6 +43,7 @@ const skillCategories = [
       { name: 'NLP (Transformers)', level: 84 },
       { name: 'Computer Vision', level: 78 },
       { name: 'Generative AI', level: 88 },
+      { name: 'OpenAI Integration', level: 75 },
       { name: 'ONNX / TensorFlow Lite', level: 72 },
     ],
   },
@@ -127,9 +131,8 @@ function SkillBar({ name, level, barColor, delay }: { name: string; level: numbe
 // Tag-cloud style additional skills
 const extraSkills = [
   'PHP', 'Laravel', 'Bootstrap', 'Hostinger', 'Java', 'Kotlin', 'C / C++',
-  'SBERT', 'FastAPI', 'Prisma', 'JWT', 'WebSockets', 'Redis', 'GraphQL',
-  'Nginx', 'Linux', 'Figma', 'Postman', 'Jest', 'OpenAI', 'Keras',
-  'TensorFlow Lite',
+  'SBERT', 'Prisma', 'JWT', 'WebSockets', 'Redis', 'GraphQL', 'Nginx',
+  'Linux', 'Figma', 'Postman', 'Jest', 'Keras', 'TensorFlow Lite',
 ];
 
 export default function Skills() {
