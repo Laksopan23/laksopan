@@ -27,6 +27,7 @@ const skillCategories = [
       { name: 'Django', level: 82 },
       { name: 'REST APIs', level: 90 },
       { name: 'Rust', level: 68 },
+      { name: 'Spring Boot', level: 74 },
     ],
   },
   {
@@ -39,13 +40,13 @@ const skillCategories = [
       { name: 'NLP (Transformers)', level: 84 },
       { name: 'Computer Vision', level: 78 },
       { name: 'Generative AI', level: 88 },
-      { name: 'LLM Orchestration', level: 78 },
+      { name: 'ONNX / TensorFlow Lite', level: 72 },
     ],
   },
   {
     icon: Database,
     category: 'Database',
-    color: 'emerald', // I'll change Database to a different color or keep it
+    color: 'cyan',
     skills: [
       { name: 'PostgreSQL', level: 84 },
       { name: 'MongoDB', level: 86 },
@@ -63,7 +64,6 @@ const skillCategories = [
       { name: 'Docker', level: 80 },
       { name: 'Coolify', level: 72 },
       { name: 'Git / CI/CD', level: 88 },
-      { name: 'Ollama', level: 72 },
     ],
   },
 ];
@@ -93,6 +93,12 @@ const colorMap: Record<string, { bg: string; bar: string; icon: string; badge: s
     icon: 'bg-amber-100 text-amber-600',
     badge: 'bg-amber-100 text-amber-700',
   },
+  cyan: {
+    bg: 'bg-cyan-50 border-cyan-100',
+    bar: 'bg-cyan-500',
+    icon: 'bg-cyan-100 text-cyan-600',
+    badge: 'bg-cyan-100 text-cyan-700',
+  },
 };
 
 function SkillBar({ name, level, barColor, delay }: { name: string; level: number; barColor: string; delay: number }) {
@@ -121,9 +127,9 @@ function SkillBar({ name, level, barColor, delay }: { name: string; level: numbe
 // Tag-cloud style additional skills
 const extraSkills = [
   'PHP', 'Laravel', 'Bootstrap', 'Hostinger', 'Java', 'Kotlin', 'C / C++',
-  'SBERT', 'Prisma', 'JWT', 'Socket.io', 'Redis', 'GraphQL', 'Nginx',
-  'Linux', 'Figma', 'Postman', 'Jest', 'Gemini', 'Groq', 'Llama',
-  'ChromaDB', 'PyAutoGUI', 'Speech Recognition', 'Whisper', 'edge-tts',
+  'SBERT', 'FastAPI', 'Prisma', 'JWT', 'WebSockets', 'Redis', 'GraphQL',
+  'Nginx', 'Linux', 'Figma', 'Postman', 'Jest', 'OpenAI', 'Keras',
+  'TensorFlow Lite',
 ];
 
 export default function Skills() {
