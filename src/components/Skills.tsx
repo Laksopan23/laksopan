@@ -1,230 +1,44 @@
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Layers, Server, Database, Cloud, Brain } from 'lucide-react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
+import { Layers3, Server, Database, Cloud, Brain } from 'lucide-react';
 
-const skillCategories = [
-  {
-    icon: Layers,
-    category: 'Frontend',
-    color: 'blue',
-    skills: [
-      { name: 'React', level: 92 },
-      { name: 'Next.js', level: 88 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Tailwind CSS', level: 90 },
-      { name: 'Flutter', level: 72 },
-      { name: 'Tauri', level: 70 },
-      { name: 'Vue', level: 65 },
-    ],
-  },
-  {
-    icon: Server,
-    category: 'Backend',
-    color: 'violet',
-    skills: [
-      { name: 'Node.js', level: 85 },
-      { name: 'Laravel', level: 80 },
-      { name: 'Python', level: 88 },
-      { name: 'Django', level: 82 },
-      { name: 'FastAPI', level: 70 },
-      { name: 'Spring Boot', level: 74 },
-      { name: 'C# / .NET', level: 65 },
-      { name: 'REST APIs', level: 90 },
-      { name: 'Rust', level: 68 },
-    ],
-  },
-  {
-    icon: Brain,
-    category: 'AI / ML',
-    color: 'emerald',
-    skills: [
-      { name: 'Machine Learning', level: 85 },
-      { name: 'Deep Learning', level: 82 },
-      { name: 'NLP (Transformers)', level: 84 },
-      { name: 'Computer Vision', level: 78 },
-      { name: 'Generative AI', level: 88 },
-      { name: 'OpenAI Integration', level: 75 },
-      { name: 'ONNX / TensorFlow Lite', level: 72 },
-    ],
-  },
-  {
-    icon: Database,
-    category: 'Database',
-    color: 'cyan',
-    skills: [
-      { name: 'PostgreSQL', level: 84 },
-      { name: 'MongoDB', level: 86 },
-      { name: 'MySQL', level: 80 },
-      { name: 'SQLite', level: 75 },
-      { name: 'Supabase', level: 78 },
-    ],
-  },
-  {
-    icon: Cloud,
-    category: 'DevOps',
-    color: 'amber',
-    skills: [
-      { name: 'AWS', level: 75 },
-      { name: 'Docker', level: 80 },
-      { name: 'Coolify', level: 72 },
-      { name: 'Git / CI/CD', level: 88 },
-    ],
-  },
-];
-
-const colorMap: Record<string, { bg: string; bar: string; icon: string; badge: string }> = {
-  blue: {
-    bg: 'bg-blue-50 border-blue-100',
-    bar: 'bg-blue-500',
-    icon: 'bg-blue-100 text-blue-600',
-    badge: 'bg-blue-100 text-blue-700',
-  },
-  violet: {
-    bg: 'bg-violet-50 border-violet-100',
-    bar: 'bg-violet-500',
-    icon: 'bg-violet-100 text-violet-600',
-    badge: 'bg-violet-100 text-violet-700',
-  },
-  emerald: {
-    bg: 'bg-emerald-50 border-emerald-100',
-    bar: 'bg-emerald-500',
-    icon: 'bg-emerald-100 text-emerald-600',
-    badge: 'bg-emerald-100 text-emerald-700',
-  },
-  amber: {
-    bg: 'bg-amber-50 border-amber-100',
-    bar: 'bg-amber-500',
-    icon: 'bg-amber-100 text-amber-600',
-    badge: 'bg-amber-100 text-amber-700',
-  },
-  cyan: {
-    bg: 'bg-cyan-50 border-cyan-100',
-    bar: 'bg-cyan-500',
-    icon: 'bg-cyan-100 text-cyan-600',
-    badge: 'bg-cyan-100 text-cyan-700',
-  },
-};
-
-function SkillBar({ name, level, barColor, delay }: { name: string; level: number; barColor: string; delay: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-40px' });
-  const proficiency = level >= 88 ? 'Advanced' : level >= 75 ? 'Intermediate' : 'Working knowledge';
-
-  return (
-    <div ref={ref} className="space-y-1.5">
-      <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-slate-700">{name}</span>
-        <span className="text-xs font-bold text-slate-400">{proficiency}</span>
-      </div>
-      <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-        <motion.div
-          className={`h-full rounded-full ${barColor}`}
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 0.9, delay, ease: 'easeOut' }}
-        />
-      </div>
-    </div>
-  );
-}
-
-// Tag-cloud style additional skills
-const extraSkills = [
-  'PHP', 'Laravel', 'Bootstrap', 'Hostinger', 'Java', 'Kotlin', 'C / C++',
-  'SBERT', 'Prisma', 'JWT', 'WebSockets', 'Redis', 'GraphQL', 'Nginx',
-  'Linux', 'Figma', 'Postman', 'Jest', 'Keras', 'TensorFlow Lite',
+const groups = [
+  { icon: Layers3, title: 'Frontend & mobile', intro: 'Interfaces and cross-platform experiences', skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Flutter', 'Vue'] },
+  { icon: Server, title: 'Backend & APIs', intro: 'Application logic, services, and integration', skills: ['Node.js', 'Express.js', 'Django', 'Laravel', 'Spring Boot', 'FastAPI', 'REST APIs', '.NET'] },
+  { icon: Database, title: 'Data', intro: 'Relational and document data stores', skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'SQLite', 'Supabase', 'Redis'] },
+  { icon: Brain, title: 'Applied AI', intro: 'Practical ML features and model integration', skills: ['Machine Learning', 'NLP', 'Computer Vision', 'Generative AI', 'SBERT', 'TensorFlow Lite', 'ONNX'] },
+  { icon: Cloud, title: 'Cloud & delivery', intro: 'Shipping, monitoring, and team workflows', skills: ['AWS', 'Docker', 'Coolify', 'CI/CD', 'Git', 'GitHub', 'Postman', 'Jira'] },
 ];
 
 export default function Skills() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  const reduceMotion = useReducedMotion();
 
   return (
-    <section id="skills" className="py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-4">
-            02 - Technical Skills
-          </p>
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-              Engineering toolkit<span className="text-slate-300">.</span>
-            </h2>
-            <p className="text-slate-500 text-sm max-w-sm">
-              I work across product design, backend architecture, and AI-powered experiences to ship meaningful digital solutions.
-            </p>
-          </div>
-          <div className="mt-6 h-px bg-slate-100" />
+    <section id="skills" className="relative overflow-hidden bg-[#f8fafc] py-24 sm:py-28">
+      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-indigo-100/50 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+        <motion.div ref={ref} initial={reduceMotion ? false : { opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .55 }} className="mb-12 max-w-2xl">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[.2em] text-slate-400">02 · Technical toolkit</p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-5xl">Tools I use to turn ideas into working products<span className="text-sky-500">.</span></h2>
+          <p className="mt-5 max-w-xl text-base leading-7 text-slate-600">A focused view of the technologies I’ve used across professional work and personal projects.</p>
         </motion.div>
-
-        {/* Skill category cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {skillCategories.map((cat, catIdx) => {
-            const colors = colorMap[cat.color];
-            return (
-              <motion.div
-                key={cat.category}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: catIdx * 0.1 }}
-                className={`p-5 rounded-2xl border ${colors.bg} hover:shadow-md transition-shadow duration-300`}
-              >
-                {/* Category header */}
-                <div className="flex items-center gap-3 mb-5">
-                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${colors.icon}`}>
-                    <cat.icon className="w-4.5 h-4.5" />
-                  </div>
-                  <span className="font-bold text-slate-900 text-sm">{cat.category}</span>
-                </div>
-
-                {/* Skill bars */}
-                <div className="space-y-4">
-                  {cat.skills.map((skill, skillIdx) => (
-                    <SkillBar
-                      key={skill.name}
-                      name={skill.name}
-                      level={skill.level}
-                      barColor={colors.bar}
-                      delay={catIdx * 0.1 + skillIdx * 0.08}
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            );
-          })}
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {groups.map((group, index) => (
+            <motion.article key={group.title} initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: index * .07 }} className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-white transition-colors group-hover:bg-sky-600"><group.icon className="h-5 w-5" /></div>
+                <div><h3 className="font-semibold text-slate-900">{group.title}</h3><p className="mt-1 text-xs leading-5 text-slate-500">{group.intro}</p></div>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">{group.skills.map(skill => <span key={skill} className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:border-sky-200 hover:bg-sky-50 hover:text-sky-800">{skill}</span>)}</div>
+            </motion.article>
+          ))}
+          <div className="flex flex-col justify-between rounded-2xl bg-slate-950 p-6 text-white shadow-sm">
+            <div><p className="text-xs font-semibold uppercase tracking-[.2em] text-sky-300">Engineering approach</p><h3 className="mt-4 text-xl font-semibold leading-snug">Build clearly. Ship carefully. Keep learning.</h3></div>
+            <p className="mt-8 text-sm leading-6 text-slate-300">From API design and data modeling to deployment and iteration, I enjoy working across the product lifecycle.</p>
+          </div>
         </div>
-
-        {/* Additional skills tag cloud */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="p-6 bg-slate-50 rounded-2xl border border-slate-200"
-        >
-          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-            Also proficient in
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {extraSkills.map((skill, i) => (
-              <motion.span
-                key={skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: 0.6 + i * 0.04 }}
-                className="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-semibold rounded-lg hover:border-slate-400 hover:text-slate-900 transition-colors duration-200 cursor-default"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
